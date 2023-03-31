@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding:15px  20px;
+            flex-wrap: wrap;
+    
+        }
+        
+        .bar1{
+            width:45px;
+            height:3px;
+            background-color: white;
+            position: absolute;
+            left:-20px;
+            top:25px;
+            
+        }
+        .bar2{
+            width: 45px;
+            height:3px;
+            background-color: white;
+            position: absolute;
+            left:-20px;
+            top:35px;
+        
+        }
+        .bar3{
+            width:45px;
+            height:3px;
+            background-color: white;
+            position: absolute;
+            left:-20px;
+            top:45px;
+            
+        }
+        .logo{
+            margin-top: 5px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .list{
+            display: flex;
+            gap:20px;
+            margin-right: 35px; 
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+        a:hover{
+            background-color: blueviolet;
+            color:azure;
+            border-radius: 4px;
+        }
+        #toggle,label{
+            display: none;
+            
+        }
+        @media(max-width:580px){
+            .list{
+                width:100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 20px;
+                
+            }
+            label{
+                display:block;
+            }
+            #toggle:checked~.list{
+                display: flex;
+
+            }
+            .bar1,.bar2 ,.bar3{
+                display: none;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+  <div class="nav">
+    <a href="#" class="logo">logo</a>
+    <input type="checkbox" id="toggle">
+    <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+    <ul class="list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">contact us</a></li>
+      <li><a href="#">sign up</a></li>
+      
+    </ul>
+  </div>
+    
+        
+
+
+       
+
+    
+</body>
+</html>
